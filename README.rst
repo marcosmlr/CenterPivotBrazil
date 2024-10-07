@@ -1,7 +1,7 @@
 Center Pivot Brazil
 ========================
 
-This project contains application source codes for the identification of circles of center pivots systems in remote sensing images using the Circular Hough Transform (CHT) method, the Balanced Random Forest (BRF) classifier and Land Use and Land Cover (LULC) data. Essentially, the repository has the main program (DetectingCenterPivot.py) to detected circles based on images of SAVI amplitudes and extract spectral/geometrical statistical information from these areas. In addition, auxiliaries programs (ClassifyPivotsAllTiles.py and PlotPivotsClassifAllTiles.py) it is used to classify information extracted from candidate circles of pivots to identify and view truly pivots against official mapped pivots by ANA in Brazil.
+This project contains application source codes for the identification of circles of center pivots systems in remote sensing images using the Circular Hough Transform (CHT) method, the Balanced Random Forest (BRF) classifier and Land Use and Land Cover (LULC) data. Essentially, the repository has the main program (DetectingCenterPivot.py) to detected circles based on images of SAVI amplitudes and extract spectral/geometrical statistical information from these areas. In addition, auxiliaries programs (ClassifyPivotsAllTiles.py and PlotPivotsClassifAllTiles.py) it is used to classify information extracted from candidate circles of pivots to identify and view pivots identified by CHT against official pivots mapped by ANA in Brazil.
 
 Release Notes
 -------------
@@ -19,13 +19,39 @@ Installation
 Build Steps
 -----------
 
-#ToDo
+.. warning:: Build steps tested only on Ubuntu 18.04
 
+**Setup Conda Environment**
+
+With Conda installed [#]_, run::
+
+  $ git clone  https://github.com/marcosmlr/CenterPivotBrazil.git
+  $ cd CenterPivotBrazil
+  $ make install
+  $ conda activate CenterPivotBrazil
+
+.. [#] If you are using a git server inside a private network and are using a self-signed certificate or a certificate over an IP address, you may also simply use the git global config to disable the ssl checks::
+
+  git config --global http.sslverify "false"
+    
 
 Usage
 -----  
 
-#ToDo
+
+First of all, we need to do download the dataset including vegetation indices, pickles objects of random forest models and pandas dataframes (#ToDo)
+
+
+Steps to identify center pivots using Python environment:
+
+- DetectingCenterPivot.py - program to read (Greenest/Amplitude) vegetation images, eliminate areas without crops using LULC information, apply Hough Transform to identify candidate circles of pivots and extract feature values from each circle. After that, export spatial data from circles as Geojson files and feature information as CSV files.
+
+- ClassifyPivotsAllTiles.py - program to label features extracted before as a pivot or not pivot based on mapping realiazed by ANA, export these dataset labeled as pickle objects, read and classify all these datasets.
+
+- [Alternative] ClassifyPivots.py - program to label features extracted before as a pivot or not pivot based on mapping realiazed by ANA, export this dataset labeled as pickle object, read and classify this dataset.
+     
+-  
+ 
 
 Data Processing Requirements
 ----------------------------
