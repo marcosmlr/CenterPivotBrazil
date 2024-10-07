@@ -1,0 +1,42 @@
+Parent ID 17293
+Open: ./landsat_GreenestSR/GreenestSR_NDVI_composite_2017_220_72.tif
+(-47.78408490816971, 0.00026949458523585647, 0.0, -16.299840998820308, 0.0, -0.00026949458523585647)
+The extent should be inside: [-47.78408490816971, -18.390041001909612, -45.67421180035819, -16.299840998820308]
+nan nan
+Float32
+-0.47733063 1.0
+Open: ./landsat_GreenestSR/GreenestSR_SAVI_composite_2017_220_72.tif
+(-47.78408490816971, 0.00026949458523585647, 0.0, -16.299840998820308, 0.0, -0.00026949458523585647)
+The extent should be inside: [-47.78408490816971, -18.390041001909612, -45.67421180035819, -16.299840998820308]
+nan nan
+Float32
+-0.3149227 1.0965928
+Open: ./landsat_AmplitudeSR/AmplitudeSR_SAVI_composite_2017_220_72.tif
+(-47.78408490816971, 0.00026949458523585647, 0.0, -16.299840998820308, 0.0, -0.00026949458523585647)
+The extent should be inside: [-47.78408490816971, -18.390041001909612, -45.67421180035819, -16.299840998820308]
+nan nan
+Float32
+2.3245811e-06 1.0497266
+
+Using amplitude SAVI information to delimit pivots!
+Open: ./MapBiomas/LULC_Collection5_2017_220_72.tif
+(-47.784084908169724, 0.0002694945852358564, 0.0, -16.2998409988203, 0.0, -0.0002694945852358564)
+The extent should be inside: [-47.784084908169724, -18.3900410019096, -45.67421180035821, -16.2998409988203]
+0 41
+Byte
+3.0 41.0
+Edged in:  0.123851445998298  seconds.
+median: 15.0 lower: 10  upper: 19
+Edges non zero: 6212548
+
+Masking not crop areas using MapBiomas LULC!
+Edges non zero after LULC mask: 671933
+
+Masking areas with lower Amplitude of SAVI (Non Cropped Areas)!
+Edges non zero after Amplitude threshold mask: 667644
+Parameters for HoughCircles: dp: 1 minDist: 17.46057051045923 param1: 50 param2: 15 minRadius: 6.984228204183692 maxRadius: 27.93691281673477
+Nr. Circles Detected: 2273
+Geometry Collection has 4546 geometries
+Creating pool with 6 ThreadPool
+
+Targets processed using Convex Hull in:  0.1003058300120756  seconds.

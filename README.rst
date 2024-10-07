@@ -11,9 +11,9 @@ Release Notes
 Installation
 ------------
 
-**Dependencies**
+**Main Dependencies**
 
-    Python 3.6.X, Numpy, OpenCV, GDAL, Geopandas and Shapely
+    Python 3.6.X, Numpy, OpenCV, GDAL, RasterIO, Scipy, Scikit-learn, Imbaleced-learn, Pandas, Geopandas and Shapely
     
 
 Build Steps
@@ -50,7 +50,7 @@ Steps to identify center pivots using Python environment:
 
 - [Alternative] ClassifyPivots.py - program to label features extracted before as a pivot or not pivot based on mapping realiazed by ANA, export this dataset labeled as pickle object, read and classify this dataset.
      
--  
+- PlotPivotsClassifAllTiles.py - program to create a choropleth map to show the percentage of recall by tile.
  
 
 Data Processing Requirements
