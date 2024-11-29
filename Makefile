@@ -13,7 +13,7 @@ default:
 	@echo 'Example: make list'
 
 install:
-        @echo
+	@echo
 	@echo 'Creating Python environment using conda:'
 	conda create -y -n CenterPivotBrazil -c conda-forge python=3.6 matplotlib gdal pandas geopandas numpy scipy scikit-learn opencv rasterio rasterstats cartopy imbalanced-learn
 
