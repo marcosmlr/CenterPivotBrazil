@@ -39,10 +39,12 @@ Usage
 -----  
 
 
-First of all, we need to do download the dataset including vegetation indices, pickles objects of random forest models and pandas dataframes (#ToDo)
+Please download the needed datasets, vegetation indices (NDVI/SAVI) and LULC for Brazil (52 Landsat tiles):
+
+https://figshare.com/collections/Automatic_Detection_of_Center_Pivots_Using_Circular_Hough_Transform_Balanced_Random_Forest_and_Land_Use_and_Land_Cover_Data/5552382
 
 
-Steps to identify center pivots using Python environment:
+Steps to identify center pivots:
 
 - DetectingCenterPivot.py - program to read (Greenest/Amplitude) vegetation images, eliminate areas without crops using LULC information, apply Hough Transform to identify candidate circles of pivots and extract feature values from each circle. After that, export spatial data from circles as Geojson files and feature information as CSV files.
 
